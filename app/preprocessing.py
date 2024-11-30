@@ -10,6 +10,7 @@ stopwords = set(stopwords.words("english"))
 def clean_text(text: str) -> str:
     """Cleans the text by making everything lowercase and removing stopwords or special characters"""
     text = text.lower()
+    text = re.sub(r'<[^>]+>', '', text)
     text = re.sub(r"[^a-zA-Z\s]", "", text)
 
     tokens = [word for word in text.split() if word not in stopwords]
