@@ -52,3 +52,8 @@ async def analyze_sentiment(review: ReviewRequest):
     sentiment = "Positive" if prediction == 1 else "Negative"
 
     return {"error": False, "review": review.input_text, "sentiment": sentiment}
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)

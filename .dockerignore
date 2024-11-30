@@ -1,0 +1,32 @@
+# Exclude Python cache files and directories
+__pycache__/
+*.pyc
+*.pyo
+
+# Exclude Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Exclude dataset files if they are large and not needed in the container
+dataset/
+
+# Exclude system and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Exclude Git and version control files
+.git/
+.gitignore
+
+# Exclude environment files
+.env
+*.env
+
+# Exclude any temporary files or logs
+*.log
+*.tmp
+
+# Exclude build-related artifacts (if any)
+build/
+dist/
+*.egg-info
